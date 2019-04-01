@@ -15,7 +15,7 @@ s.data$DT <- paste(s.data$Date, s.data$Time)
 s.data$DT <- ymd_hms(s.data$DT)
 
 # draw plot
-png("plot2.png")
+png("plot2.png",  width = 480, height = 480)
 with(s.data, plot(DT, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 dev.off()
 

@@ -16,7 +16,7 @@ s.data$DT <- ymd_hms(s.data$DT)
 
 # Submetering_1 has the largest range of y values
 # draw plot
-png("plot3.png")
+png("plot3.png",  width = 480, height = 480)
 with(s.data, plot(DT, Sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering"))
 lines(s.data$DT, s.data$Sub_metering_1, col = "black")
 lines(s.data$DT, s.data$Sub_metering_2, col = "red")

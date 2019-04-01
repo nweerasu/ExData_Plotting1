@@ -16,7 +16,7 @@ s.data$DT <- ymd_hms(s.data$DT)
 
 # Submetering_1 has the largest range of y values
 # draw plot
-png("plot4.png")
+png("plot4.png",  width = 480, height = 480)
 par(mfrow= c(2, 2))
 # first plot
 with(s.data, plot(DT, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power"))
