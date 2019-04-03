@@ -1,6 +1,14 @@
 ### Plot 3 ###
 library(lubridate)
 
+# download data
+url <- "http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+
+download.file(url, destfile = "./data/exdata_house.zip", method = "curl")
+
+# unzip
+unzip("./data/exdata_house.zip", exdir = "./data")
+
 # read in data
 data <- read.table("data/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?")
 
